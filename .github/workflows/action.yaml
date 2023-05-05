@@ -36,7 +36,8 @@ jobs:
                   "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "New request"
+                    "text": "DipSA 56 CI/CD Submission",
+                    "emoji": true
                   }
                 },
                 {
@@ -44,11 +45,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Type:*\nPaid Time Off"
+                      "text": "*Name: * NAY WONN NI"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Created by:*\n<example.com|Fred Enriquez>"
+                      "text": "*Email: * e1112939@u.nus.edu"
                     }
                   ]
                 },
@@ -57,7 +58,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*When:*\nAug 10 - Aug 13"
+                      "text": "Matriculation: A0269556L"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "Repository:\n ${{github.event.repository.html_url}}"
                     }
                   ]
                 },
@@ -65,11 +70,30 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "<https://example.com|View request>"
+                    "text": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": " "
+                  },
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Go",
+                      "emoji": true
+                    },
+                    "value": "click_me_123",
+                    "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app",
+                    "action_id": "button-action"
                   }
                 }
               ]
             }
+
 
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
