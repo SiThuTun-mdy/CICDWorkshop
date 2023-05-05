@@ -70,7 +70,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app"
+                    "text": "https://${{ env.VAR_RAILWAY_URL }}.up.railway.app"
                   }
                 },
                 {
@@ -87,14 +87,12 @@ jobs:
                       "emoji": true
                     },
                     "value": "click_me_123",
-                    "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app",
+                    "url": "https://${{ env.VAR_RAILWAY_URL }}.up.railway.app",
                     "action_id": "button-action"
                   }
                 }
               ]
             }
-
-
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
