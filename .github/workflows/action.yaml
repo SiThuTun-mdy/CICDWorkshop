@@ -2,7 +2,7 @@ name: nwnassignment
 on: 
   push:
     branches: 
-      - release/v*.*
+      - main
 
 jobs:
   build:
