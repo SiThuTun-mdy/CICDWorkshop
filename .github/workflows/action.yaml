@@ -1,7 +1,8 @@
 name: nwnassignment
-on: 
+
+on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -18,12 +19,12 @@ jobs:
           go-version: '^1.13.1'
 
       - name: Install Railway with NPM
-        run: npm i -g @railway/cli 
+        run: npm i -g @railway/cli
 
       - name: deploy railway
         run: railway up
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} 
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
       - name: Send data to Slack workflow
         id: slack
@@ -45,11 +46,11 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Name: * NAY WONN NI"
+                      "text": "*Name:* NAY WONN NI"
                     },
                     {
                       "type": "mrkdwn",
-                      "text: "*Email: * e1112939@u.nus.edu"
+                      "text": "*Email:* e1112939@u.nus.edu"
                     }
                   ]
                 },
@@ -62,7 +63,7 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "Repository:\n ${{github.event.repository.html_url}}"
+                      "text": "Repository:\n${{github.event.repository.html_url}}"
                     }
                   ]
                 },
@@ -92,12 +93,7 @@ jobs:
                   }
                 }
               ]
-            }          
+            }
         env:
           SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-
-
-  
-      
-
