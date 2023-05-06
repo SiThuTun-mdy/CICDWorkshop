@@ -72,14 +72,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "https://${{secrets.VAR_RAILWAY_URL}}.up.railway.app"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": " "
+                    "text": " https://${{secrets.VAR_RAILWAY_URL}}.up.railway.app"
                   },
                   "accessory": {
                     "type": "button",
