@@ -87,9 +87,7 @@ jobs:
                       "text": "Go",
                       "emoji": true
                     },
-                    "value": "click_me_123",
-                    "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app",
-                    "action_id": "button-action"
+                    "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app"
                   }
                 }
               ]
