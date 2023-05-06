@@ -37,7 +37,7 @@ jobs:
                   "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "This is a header block",
+                    "text": "DipSA 56 CI/CD Submission",
                     "emoji": true
                   }
                 },
@@ -46,23 +46,24 @@ jobs:
                   "fields": [
                     {
                       "type": "mrkdwn",
-                      "text": "*Type:*\nComputer (laptop)"
+                      "text": "*Name:* NAY WONN NI"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*When:*\nSubmitted Aut 10"
+                      "text": "*Email:* e1112939@u.nus.edu"
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Matriculation: A0269556L"
                     },
                     {
                       "type": "mrkdwn",
-                      "text": "*Last Update:*\nMar 10, 2015 (3 years, 5 months)"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Reason:*\nAll vowel keys aren't working."
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Specs:*\n\"Cheetah Pro 15\" - Fast, really fast\""
+                      "text": "Repository:\n${{github.event.repository.html_url}}"
                     }
                   ]
                 },
@@ -70,17 +71,24 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "This is a section block with a button."
+                    "text": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": " "
                   },
                   "accessory": {
                     "type": "button",
                     "text": {
                       "type": "plain_text",
-                      "text": "Click Me",
+                      "text": "Go",
                       "emoji": true
                     },
                     "value": "click_me_123",
-                    "url": "https://google.com",
+                    "url": "https://${{vars.VAR_RAILWAY_URL}}.up.railway.app",
                     "action_id": "button-action"
                   }
                 }
